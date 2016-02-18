@@ -8,7 +8,7 @@
 #include "SFMLI.h"
 #include "GI.h"
 
-static enum Layer{
+enum Layer{
 	LAYER0 = 0,
 	LAYER1 = 1,
 	LAYER2 = 2,

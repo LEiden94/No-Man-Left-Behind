@@ -47,16 +47,15 @@ void Game::run(){
 	progressbar->size = Vector(500.0f, 100.0f);
 	progressbar->progress = 0.5f;
 	progressbar->bleft = manager->spriteManager->getSprite("Floortiles.Stone");
+	progressbar->bright = manager->spriteManager->getSprite("Floortiles.Stone");
+	progressbar->bmiddle = manager->spriteManager->getBackground("Dirt");
 
-	
-	window->setFramerateLimit(0);
+	window->setFramerateLimit(60);
 	while (gi::startOfFrame()){
 		world->tick();
 		manager->tick(window, world->time(), world->dt());
 
-		
-
-		player->velocity = controller->movement() * 400.0f;
+		player->velocity = controller->movement() * (400.0f * (manager->inputManager->isPressed(Keyboard::LShift) ? 10.0f : 1.0f));
 		player->tick(world->time(), world->dt());
 		gi::cameraX = player->position.x;
 		gi::cameraY = player->position.y;

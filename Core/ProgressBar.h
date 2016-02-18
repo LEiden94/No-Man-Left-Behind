@@ -13,7 +13,7 @@ public:
 
 	sf::Sprite* bleft;
 	sf::Sprite* bright;
-	sf::Sprite* bmiddle;
+	sf::Texture* bmiddle;
 
 	float progress;
 };

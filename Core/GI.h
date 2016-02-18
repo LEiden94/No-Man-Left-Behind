@@ -6,6 +6,7 @@
 #include "Drawable.h"
 #include "Constants.h"
 #include "ProgressBar.h"
+#include "MenuManager.h"
 
 namespace gi{
 	static const float TARGET_WIDTH = 1920;
@@ -50,6 +51,8 @@ namespace gi{
 	void draw(Menu* menu, const sf::Time& time);
 
 	void draw(ProgressBar* progressbar, const sf::Time& time);
+
+//	void draw(TexBar* texbar, const sf::Time& time, Vector& position, Vector& size); //Cirkulärt beroende + TexBar undeclared identifier
 
 	// endOfFrame
 	bool endOfFrame();

@@ -3,7 +3,25 @@
 #include "GI.h"
 #include "Menu.h"
 #include "SFMLI.h"
+#include "Vector.h"
 #include "InputManager.h"
+
+
+
+class TexBar {
+public:
+	TexBar() {
+
+	}
+
+	~TexBar() {
+
+	}
+
+	sf::Texture* left;
+	sf::Texture* right;
+	sf::Texture* middle;
+};
 
 class MenuManager{
 public:
